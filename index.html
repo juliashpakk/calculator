@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <script>
+     
+     function squareRoot(x) {
+        return Math.sqrt(x);
+      }
+
+      function clearInput() {
+        document.getElementById("input").value = "";
+      }
+
+      function backspace() {
+        let input = document.getElementById("input").value;
+        document.getElementById("input").value = input.slice(0, -1);
+      }
+
+      function calculate() {
+        let input = document.getElementById("input").value;
+        input = input.replace(/%/g, "/100*");
+        input = input.replace(/√/g, "squareRoot(");
+        if(input.includes('squareRoot(')){
+            input+=')';
+        }
+       
+        let result = eval(input);
+        
+        document.getElementById("input").value = result;
+      }
+      
+    </script>
+  </head>
+  <body >
+    <div class="a1" >
+      <br>  
+    <input type="text" class="a4" id="input"/>
+    <br/>
+    <br>
+    <div class="a5">
+    <button onclick="clearInput()" class="a2">C</button>
+    <button onclick="backspace()" class="a22">CE</button>
+    <button onclick="document.getElementById('input').value += '√'" class="a3">√</button>
+    <button onclick="document.getElementById('input').value += '+'" class="a3">+</button>
+    <button onclick="document.getElementById('input').value += '-'" class="a3">-</button>
+    <button onclick="document.getElementById('input').value += '*'" class="a3">*</button>
+    <button onclick="document.getElementById('input').value += '/'" class="a3">/</button>
+    <button onclick="document.getElementById('input').value += '1/'" class="a3">1/x</button>
+    <button onclick="document.getElementById('input').value += '%'" class="a3">%</button>
+    <button onclick="document.getElementById('input').value += '('" class="a3">(</button>
+    <button onclick="document.getElementById('input').value += ')'"class="a3">)</button>    
+    <button onclick="document.getElementById('input').value += '6'">6</button>   
+    <button onclick="document.getElementById('input').value += '7'">7</button>
+    <button onclick="document.getElementById('input').value += '8'">8</button>
+    <button onclick="document.getElementById('input').value += '9'">9</button>
+    <button onclick="document.getElementById('input').value += '2'">2</button>
+    <button onclick="document.getElementById('input').value += '3'">3</button>
+    <button onclick="document.getElementById('input').value += '4'">4</button>
+    <button onclick="document.getElementById('input').value += '5'">5</button>
+    <button onclick="document.getElementById('input').value += '0'">0</button>
+    <button onclick="document.getElementById('input').value += '1'">1</button>
+    <button onclick="document.getElementById('input').value += '.'" class="a3">.</button>
+    <button onclick="calculate()" class="a3">=</button>
+    </div>
+  </div>
+  </body>
+</html>

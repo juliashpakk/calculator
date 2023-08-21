@@ -1,0 +1,53 @@
+body {
+    background-color: #f2f2f2;
+  }
+
+  .a1{
+    background-color: rgb(174, 0, 255); 
+    border-radius: 20px;
+    border: none;
+    height: 450px; 
+    width: 290px; 
+    display: block; 
+    padding: 15px; 
+    margin-left: 600px; 
+    margin-top: 120px;
+  }
+
+  .a2{
+    background-color: rgb(255, 255, 128);
+    width: 115px;
+  }
+  .a22{
+    background-color: rgb(255, 255, 128);
+  }
+
+  .a3{
+    background-color: rgb(15, 211, 178);
+  }
+  .a4{
+    margin-left: 15px;
+  }
+  .a5{
+    margin-left: 19px;
+  }
+  
+  #input {
+    width: 250px;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-right: 10px;
+  }
+  
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+  }
